@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="indiavisual.css">
+    <script src="indiavisual.js"></script>
+</head>
+
+<body>
+    <div id='map' style='width: 100vw; height: 100vh;'></div>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoidmFpYmhhdnM4MjgiLCJhIjoiY2tmM2kzdXU3MDNqYzJwcWVkMmJlZ3ZrcSJ9.2_jGbUOc6DbME3Y8imHg7A';
+  var bounds = [
+[45.93303,4.853075], // Southwest coordinates
+[108.457505,37.6207] // Northeast coordinates
+];
+  var map = new mapboxgl.Map({
+    container: 'map',
+    center: [77.04, 22.907],
+    style: 'mapbox://styles/mapbox/dark-v10',
+    zoom: 0.8,
+    maxBounds: bounds // Sets bounds as max
+  });
+  // disable map zoom when using scroll
+map.scrollZoom.disable();
+
+</script>
+
+</body>
+
+</html>
